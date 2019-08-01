@@ -312,23 +312,26 @@ template {
     Base
 ============= */
 figure {
-  padding: 0;
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
 
 ul {
-  padding: 0;
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
   ul li {
     list-style: none; }
 
 .content-grid {
   display: grid;
-  grid-template-columns: 5% auto 5%;
   grid-template-areas: ". content .";
+  grid-template-columns: 5% auto 5%;
   padding-top: 40px; }
-  @media (min-width: 992px) {
+  @media (min-width: 1000px) {
     .content-grid {
-      padding-top: 60px; } }
+      padding-top: 50px; } }
+  @media (min-width: 1200px) {
+    .content-grid {
+      grid-template-columns: auto 1200px auto; } }
   .content-grid > div {
     grid-area: content; }
 
@@ -436,11 +439,17 @@ a:link {
         Here are the properties you can changes for the off-canvas navigation-slide
     ------------- */
   background-color: #26271F;
-  grid-template-columns: 10px auto;
   grid-template-areas: ". off-canvas";
+  grid-template-columns: 10px auto;
   padding-top: 10px;
   width: 250px;
   /* close btn */ }
+  @media (min-width: 750px) {
+    #off-canvas-container {
+      width: 300px; } }
+  @media (min-width: 1000px) {
+    #off-canvas-container {
+      width: 350px; } }
   #off-canvas-container div {
     /* close btn */ }
     #off-canvas-container div > button {
@@ -454,24 +463,27 @@ a:link {
       transition: 0.25s;
       width: 100%; }
     #off-canvas-container div nav section div {
-      width: 100%;
-      display: flex; }
+      display: flex;
+      width: 100%; }
       #off-canvas-container div nav section div input {
-        width: 100%;
-        height: 50px;
-        outline: none;
-        color: #26271F;
         background-color: #B4AB72;
         border: none;
-        padding: 0 0 0 10px; }
-      #off-canvas-container div nav section div button {
-        width: 70px;
+        color: #26271F;
         height: 50px;
+        outline: none;
+        padding: 0 0 0 10px;
+        width: 100%; }
+        #off-canvas-container div nav section div input::placeholder {
+          color: #26271F;
+          opacity: 0.6; }
+      #off-canvas-container div nav section div button {
         background: #FF9041;
-        text-align: center;
         color: #fff;
         cursor: pointer;
-        font-size: 20px; }
+        font-size: 20px;
+        height: 50px;
+        text-align: center;
+        width: 70px; }
         #off-canvas-container div nav section div button img {
           padding-top: 6px; }
     #off-canvas-container div nav ul li {
@@ -479,23 +491,31 @@ a:link {
       #off-canvas-container div nav ul li a:link,
       #off-canvas-container div nav ul li a:visited {
         color: #fff;
+        display: inline-block;
+        font-size: 1.25rem;
         font-weight: bold;
         padding: 15px 5% 0 0;
-        display: inline-block;
-        width: 95%;
-        font-size: 1.25rem; }
+        width: 95%; }
+        @media (min-width: 750px) {
+          #off-canvas-container div nav ul li a:link,
+          #off-canvas-container div nav ul li a:visited {
+            font-size: 1.625rem; } }
+        @media (min-width: 1000px) {
+          #off-canvas-container div nav ul li a:link,
+          #off-canvas-container div nav ul li a:visited {
+            font-size: 1.875rem; } }
     #off-canvas-container div nav ul:nth-child(2) li a:link::after,
     #off-canvas-container div nav ul:nth-child(2) li a:visited::after {
+      background: #B4AB72;
       content: '';
       display: block;
-      width: 100%;
       height: 1px;
-      background: #B4AB72;
-      margin-top: 15px; }
+      margin-top: 15px;
+      width: 100%; }
     #off-canvas-container div nav ul:nth-child(2) li a:active,
     #off-canvas-container div nav ul:nth-child(2) li a:hover {
-      color: #000;
-      background-color: #FF9041; }
+      background-color: #FF9041;
+      color: #000; }
     #off-canvas-container div nav ul:nth-child(3) {
       display: flex;
       justify-content: space-between;
@@ -503,24 +523,31 @@ a:link {
       padding-right: 5%; }
 
 #burger-icon {
-  background-color: #26271F;
-  border: 1px solid #FF9041;
+  background-color: #FF9041;
+  border: 1px solid #26271F;
   border-radius: 100px;
   font-size: 1.125rem;
-  width: 40px;
   height: 40px;
+  left: 20px;
   outline: none;
   padding: 8px;
   position: fixed;
-  left: 20px;
   top: 20px;
+  width: 40px;
   z-index: 100; }
+  @media (min-width: 1000px) {
+    #burger-icon {
+      font-size: 1.75rem;
+      height: 56px;
+      left: 25px;
+      top: 25px;
+      width: 56px; } }
   #burger-icon i {
     color: #fff; }
 
 #burger-icon:hover {
-  background-color: #000;
-  color: #fff; }
+  background-color: #26271F;
+  border: 1px solid #FF9041; }
 
 /* =============
     Header
@@ -532,43 +559,114 @@ a:link {
     Hero
 ============= */
 #hero {
-  background-image: url(../img/hero/hero.jpg);
+  background-image: url("../img/hero/hero.jpg");
+  background-position: center;
   background-size: cover;
   height: 300px; }
+  @media (min-width: 600px) {
+    #hero {
+      height: 400px; } }
+  @media (min-width: 750px) {
+    #hero {
+      height: 550px; } }
+  @media (min-width: 1000px) {
+    #hero {
+      height: 600px; } }
+  @media (min-width: 1200px) {
+    #hero {
+      height: 675px; } }
 
 /* =============
     Info
 ============= */
 #info div {
   font-weight: 300; }
+  @media (min-width: 750px) {
+    #info div {
+      padding: 5% 10%; } }
   #info div h1 {
     font-size: 1.875rem;
     font-weight: 300;
-    text-align: center;
-    padding-bottom: 10px; }
+    padding-bottom: 2%;
+    text-align: center; }
+    @media (min-width: 600px) {
+      #info div h1 {
+        font-size: 2.5rem; } }
+    @media (min-width: 750px) {
+      #info div h1 {
+        font-size: 3.125rem;
+        margin-bottom: 3%; } }
+    @media (min-width: 1000px) {
+      #info div h1 {
+        font-size: 3.75rem; } }
+    @media (min-width: 1200px) {
+      #info div h1 {
+        font-size: 4.25rem; } }
   #info div p {
     line-height: 1.75rem;
     text-align: justify; }
+    @media (min-width: 600px) {
+      #info div p {
+        font-size: 1.25rem;
+        line-height: 2.125rem; } }
+    @media (min-width: 750px) {
+      #info div p {
+        font-size: 1.625rem;
+        line-height: 2.5rem; } }
+    @media (min-width: 1000px) {
+      #info div p {
+        font-size: 1.75rem;
+        line-height: 3.4375rem; } }
+    @media (min-width: 1200px) {
+      #info div p {
+        font-size: 2rem;
+        line-height: 4.375rem; } }
 
 /* =============
     Gallery
 ============= */
 #gallery {
   margin-bottom: 10px; }
+  @media (min-width: 750px) {
+    #gallery {
+      margin-bottom: 50px; } }
   #gallery div ul {
     display: grid;
-    grid-template-columns: repeat 1, 1fr;
-    grid-template-areas: "gallery_1" "gallery_2" "gallery_3"; }
+    grid-gap: 2%;
+    grid-template-areas: "gallery_1" "gallery_2" "gallery_3";
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 300px); }
+    @media (min-width: 750px) {
+      #gallery div ul {
+        grid-template-areas: "gallery_2 gallery_2 gallery_2" "gallery_1 gallery_1 gallery_3";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 400px 350px; } }
+    @media (min-width: 1200px) {
+      #gallery div ul {
+        grid-template-areas: "gallery_1 gallery_2 gallery_3";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 300px; } }
     #gallery div ul li {
-      background-size: cover;
-      height: 300px;
-      margin-bottom: 10px; }
+      background-position: center;
+      background-size: cover; }
     #gallery div ul li:nth-child(1) {
-      grid-area: gallery_1;
-      background-image: url(../img/gallery/gallery_1.jpg); }
+      background-image: url("../img/gallery/gallery_1.jpg");
+      grid-area: gallery_1; }
+      @media (min-width: 750px) {
+        #gallery div ul li:nth-child(1) {
+          background-position: left; } }
+      @media (min-width: 1200px) {
+        #gallery div ul li:nth-child(1) {
+          background-position: center; } }
     #gallery div ul li:nth-child(2) {
-      grid-area: gallery_2;
-      background-image: url(../img/gallery/gallery_2.jpg); }
+      background-image: url("../img/gallery/gallery_2.jpg");
+      grid-area: gallery_2; }
     #gallery div ul li:nth-child(3) {
-      grid-area: gallery_3;
-      background-image: url(../img/gallery/gallery_3.png); }
+      background-image: url("../img/gallery/gallery_3.png");
+      grid-area: gallery_3; }
+      @media (min-width: 750px) {
+        #gallery div ul li:nth-child(3) {
+          background-position: left; } }
+      @media (min-width: 1200px) {
+        #gallery div ul li:nth-child(3) {
+          background-position: center; } }

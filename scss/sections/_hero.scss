@@ -1,8 +1,21 @@
 /* =============
     Hero
 ============= */
-#hero{
-    background-image: url(../img/hero/hero.jpg);
+#hero {
+    background-image: url("../img/hero/hero.jpg");
+    background-position: center;
     background-size: cover;
-    height:300px;
+    height: 300px;
+    @include sm {
+        height: 400px;
+    }
+    @include md {
+        height: 550px;
+    }
+    @include lg {
+        height: 600px;
+    }
+    @include xl {
+        height: 675px;
+    }
 }

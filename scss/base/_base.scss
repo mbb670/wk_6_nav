@@ -1,34 +1,35 @@
 /* =============
     Base
 ============= */
-figure{
-    padding: 0;
+figure {
     margin: 0;
+    padding: 0;
 }
 
-ul{
-    padding: 0;
+ul {
     margin: 0;
-    li{
+    padding: 0;
+
+    li {
         list-style: none;
     }
 }
 
-main{
+main {}
 
-}
-
-.content-grid{
+.content-grid {
     display: grid;
-    grid-template-columns: 5% auto 5%;
     grid-template-areas: ". content .";
+    grid-template-columns: 5% auto 5%;
     padding-top: 40px;
-
-    @include lg{
-        padding-top: 60px;
+    @include lg {
+        padding-top: 50px;
+    }
+    @include xl {
+        grid-template-columns: auto 1200px auto;
     }
 
-    >div{
+    > div {
         grid-area: content;
     }
 }

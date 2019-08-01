@@ -12,12 +12,19 @@ a:link {
         Here are the properties you can changes for the off-canvas navigation-slide
     ------------- */
     background-color: $drk-brwn;
-    grid-template-columns: 10px auto;
     grid-template-areas: ". off-canvas";
+    grid-template-columns: 10px auto;
     padding-top: 10px;
     // width of the off canvas navigation
     width: 250px;
     /* close btn */
+    @include md {
+        width: 300px;
+    }
+    @include lg {
+        width: 350px;
+    }
+
     div {
         > button {
             background-color: transparent;
@@ -31,35 +38,39 @@ a:link {
             width: 100%;
         }
         /* close btn */
-        >button:hover {
+        > button:hover {
             // color: $red;
         }
 
         nav {
             section {
                 div {
-                    width: 100%;
                     display: flex;
+                    width: 100%;
 
                     input {
-                        width: 100%;
-                        height: 50px;
-                        outline: none;
-                        color: $drk-brwn;
                         background-color: $gold;
                         border: none;
+                        color: $drk-brwn;
+                        height: 50px;
+                        outline: none;
                         padding: 0 0 0 10px;
+                        width: 100%;
 
+                        &::placeholder {
+                            color: $drk-brwn;
+                            opacity: 0.6;
+                        }
                     }
 
                     button {
-                        width: 70px;
-                        height: 50px;
                         background: $orange;
-                        text-align: center;
                         color: #fff;
                         cursor: pointer;
                         font-size: 20px;
+                        height: 50px;
+                        text-align: center;
+                        width: 70px;
 
                         img {
                             padding-top: 6px;
@@ -75,11 +86,17 @@ a:link {
                     a:link,
                     a:visited {
                         color: $white;
+                        display: inline-block;
+                        font-size: rem-calc(20);
                         font-weight: bold;
                         padding: 15px 5% 0 0;
-                        display: inline-block;
                         width: 95%;
-                        font-size: rem-calc(20);
+                        @include md {
+                            font-size: rem-calc(26);
+                        }
+                        @include lg {
+                            font-size: rem-calc(30);
+                        }
                     }
                 }
             }
@@ -88,19 +105,20 @@ a:link {
                 li {
                     a:link,
                     a:visited {
-                        &::after{
+                        &::after {
+                            background: $gold;
                             content: '';
                             display: block;
-                            width: 100%;
-                            height:1px;
-                            background: $gold;
+                            height: 1px;
                             margin-top: 15px;
+                            width: 100%;
                         }
                     }
+
                     a:active,
                     a:hover {
-                        color: $black;
                         background-color: $orange;
+                        color: $black;
                     }
                 }
             }
@@ -116,18 +134,25 @@ a:link {
 }
 
 #burger-icon {
-    background-color: $drk-brwn;
-    border: 1px solid $orange;
+    background-color: $orange;
+    border: 1px solid $drk-brwn;
     border-radius: 100px;
     font-size: rem-calc(18);
-    width: 40px;
     height: 40px;
+    left: 20px;
     outline: none;
     padding: 8px;
     position: fixed;
-    left: 20px;
     top: 20px;
+    width: 40px;
     z-index: 100;
+    @include lg {
+        font-size: rem-calc(28);
+        height: 56px;
+        left: 25px;
+        top: 25px;
+        width: 56px;
+    }
 
     i {
         color: $white;
@@ -135,6 +160,6 @@ a:link {
 }
 
 #burger-icon:hover {
-    background-color: $black;
-    color: $white;
+    background-color: $drk-brwn;
+    border: 1px solid $orange;
 }
