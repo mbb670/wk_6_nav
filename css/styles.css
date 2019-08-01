@@ -626,10 +626,10 @@ a:link {
     Gallery
 ============= */
 #gallery {
-  margin-bottom: 10px; }
+  padding-bottom: 10px; }
   @media (min-width: 750px) {
     #gallery {
-      margin-bottom: 50px; } }
+      padding-bottom: 50px; } }
   #gallery div ul {
     display: grid;
     grid-gap: 2%;

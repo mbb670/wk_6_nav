@@ -2,9 +2,9 @@
     Gallery
 ============= */
 #gallery {
-    margin-bottom: 10px;
+    padding-bottom: 10px;
     @include md {
-        margin-bottom: 50px;
+        padding-bottom: 50px;
     }
 
     div {
