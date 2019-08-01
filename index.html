@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font Awesome -->
+    
+    <!-- Google Font -->
+
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Off Canvas Navigation Template</title>
+</head>
+
+<body>
+
+    <!-- Your options for data-navigation-position is: left | right -->
+    <!-- Your options for data-navigation-slide is: over | under | push -->
+    <section id="off-canvas-container" data-navigation-position="right" data-navigation-slide="push">
+        <div>
+            <button>
+                <i class="far fa-times-circle" id="close-btn"></i>
+            </button>
+            <div id="nav-container">
+                <nav data-nav="main-navigation">
+
+                    <ul>
+                        <li><a href="">link 1</a></li>
+                        <li><a href="">link 2</a></li>
+                        <li><a href="">link 2</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- burger icon -->
+    <!-- The burger icon needs to be outside of the main tag if you are going to position fix it. -->
+    <button id="burger-icon" data-fixed="fixed-item">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!--
+    *************** Your website content goes here! ***************
+    -->
+    <main>
+
+        <!-- overlay for the view when the menu is visible. Please don't move -->
+        <div class="js-off-canvas-overlay" id="overlay"></div>
+        <!-- overlay for the view when the menu is visible. Please don't move -->
+
+        <!-- Your Content -->
+
+        <!-- End Your Content -->
+    </main>
+    <!--
+    *************** End of Website content! ***************
+    -->
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Greensock -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
