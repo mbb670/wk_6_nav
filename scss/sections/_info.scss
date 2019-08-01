@@ -1,0 +1,19 @@
+/* =============
+    Info
+============= */
+#info{
+    div{
+        font-weight: 300;
+        h1{
+            font-size: rem-calc(30);
+            font-weight: 300;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        p{
+            line-height: rem-calc(28);
+            text-align: justify;
+        }
+    }
+}

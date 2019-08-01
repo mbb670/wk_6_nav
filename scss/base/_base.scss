@@ -13,3 +13,22 @@ ul{
         list-style: none;
     }
 }
+
+main{
+
+}
+
+.content-grid{
+    display: grid;
+    grid-template-columns: 5% auto 5%;
+    grid-template-areas: ". content .";
+    padding-top: 40px;
+
+    @include lg{
+        padding-top: 60px;
+    }
+
+    >div{
+        grid-area: content;
+    }
+}

@@ -311,12 +311,6 @@ template {
 /* =============
     Base
 ============= */
-main {
-  background-color: #fff;
-  position: relative;
-  z-index: 10;
-  min-height: 100vh; }
-
 figure {
   padding: 0;
   margin: 0; }
@@ -327,89 +321,34 @@ ul {
   ul li {
     list-style: none; }
 
+.content-grid {
+  display: grid;
+  grid-template-columns: 5% auto 5%;
+  grid-template-areas: ". content .";
+  padding-top: 40px; }
+  @media (min-width: 992px) {
+    .content-grid {
+      padding-top: 60px; } }
+  .content-grid > div {
+    grid-area: content; }
+
 /* =============
     Typography
 ============= */
 body {
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Open Sans', sans-serif; }
   body h1, body h2, body h3, body h4, body h5, body h6, body p {
     margin: 0;
     padding: 0; }
 
 /* =============
-    Buttons
-============= */
-button {
-  outline: none; }
-
-/* =============
-    Forms
-============= */
-[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
-  box-shadow: none; }
-
-[type='text']:focus, [type='password']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='week']:focus, [type='email']:focus, [type='number']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='url']:focus, [type='color']:focus, textarea:focus {
-  box-shadow: none; }
-
-input[type=text],
-input[type=email],
-input[type=password],
-textarea {
-  -webkit-appearance: none; }
-
-/* =============
-    Navigation
-============= */
-a:hover,
-a:link {
-  text-decoration: none;
-  transition: o 0.25s; }
-
-#off-canvas-container {
-  /* -------------
-        Here are the properties you can changes for the off-canvas navigation-slide
-    ------------- */
-  /* close btn */
-  /* close btn */ }
-  #off-canvas-container button {
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 1.5625rem;
-    margin-bottom: 20px;
-    text-align: right;
-    transition: 0.25s;
-    width: 100%; }
-  #off-canvas-container button:hover {
-    color: #fc4a27; }
-  #off-canvas-container ul li {
-    margin-bottom: 20px; }
-    #off-canvas-container ul li a:link,
-    #off-canvas-container ul li a:visited {
-      color: #fff; }
-    #off-canvas-container ul li a:active,
-    #off-canvas-container ul li a:hover {
-      color: #30f7f0; }
-
-#burger-icon {
-  background-color: #fff;
-  border: none;
-  font-size: 1.125rem;
-  outline: none;
-  padding: 8px;
-  position: fixed;
-  right: 20px;
-  top: 20px;
-  z-index: 100; }
-
-#burger-icon:hover {
-  background-color: #000;
-  color: #fff; }
-
-/* =============
     Off Canvas
 ============= */
+main {
+  position: relative;
+  z-index: 10;
+  background-color: #fff; }
+
 #off-canvas-container {
   background-color: #000;
   display: grid;
@@ -464,6 +403,122 @@ a:link {
   visibility: visible !important; }
 
 /* =============
+    Buttons
+============= */
+button {
+  outline: none; }
+
+/* =============
+    Forms
+============= */
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+  box-shadow: none; }
+
+[type='text']:focus, [type='password']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='week']:focus, [type='email']:focus, [type='number']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='url']:focus, [type='color']:focus, textarea:focus {
+  box-shadow: none; }
+
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+  -webkit-appearance: none; }
+
+/* =============
+    Navigation
+============= */
+a:hover,
+a:link {
+  text-decoration: none;
+  transition: 0.25s; }
+
+#off-canvas-container {
+  /* -------------
+        Here are the properties you can changes for the off-canvas navigation-slide
+    ------------- */
+  background-color: #26271F;
+  grid-template-columns: 10px auto;
+  grid-template-areas: ". off-canvas";
+  padding-top: 10px;
+  width: 250px;
+  /* close btn */ }
+  #off-canvas-container div {
+    /* close btn */ }
+    #off-canvas-container div > button {
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1.5625rem;
+      margin-bottom: 10px;
+      text-align: right;
+      transition: 0.25s;
+      width: 100%; }
+    #off-canvas-container div nav section div {
+      width: 100%;
+      display: flex; }
+      #off-canvas-container div nav section div input {
+        width: 100%;
+        height: 50px;
+        outline: none;
+        color: #26271F;
+        background-color: #B4AB72;
+        border: none;
+        padding: 0; }
+      #off-canvas-container div nav section div button {
+        width: 40px;
+        height: 50px;
+        background: #FF9041;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+        font-size: 20px; }
+    #off-canvas-container div nav ul li {
+      text-align: right; }
+      #off-canvas-container div nav ul li a:link,
+      #off-canvas-container div nav ul li a:visited {
+        color: #fff;
+        font-weight: bold;
+        padding: 15px 5% 0 0;
+        display: inline-block;
+        width: 95%;
+        font-size: 1.25rem; }
+    #off-canvas-container div nav ul:nth-child(2) li a:link::after,
+    #off-canvas-container div nav ul:nth-child(2) li a:visited::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #B4AB72;
+      margin-top: 15px; }
+    #off-canvas-container div nav ul:nth-child(2) li a:active,
+    #off-canvas-container div nav ul:nth-child(2) li a:hover {
+      color: #000;
+      background-color: #FF9041; }
+    #off-canvas-container div nav ul:nth-child(3) {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 50%;
+      padding-right: 5%; }
+
+#burger-icon {
+  background-color: #26271F;
+  border: 1px solid #FF9041;
+  border-radius: 100px;
+  font-size: 1.125rem;
+  outline: none;
+  padding: 8px;
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 100; }
+  #burger-icon i {
+    color: #fff; }
+
+#burger-icon:hover {
+  background-color: #000;
+  color: #fff; }
+
+/* =============
     Header
 ============= */
 /* =============
@@ -473,31 +528,41 @@ a:link {
     Hero
 ============= */
 #hero {
-  background-image: url("../img/hero.jpg");
-  height: 50vh;
-  background-size: cover; }
+  background-image: url(../img/hero/hero.jpg);
+  background-size: cover;
+  height: 300px; }
 
 /* =============
-    Intro
+    Info
 ============= */
-#intro {
+#info div {
+  font-weight: 300; }
+  #info div h1 {
+    font-size: 1.875rem;
+    font-weight: 300;
+    text-align: center;
+    padding-bottom: 10px; }
+  #info div p {
+    line-height: 1.75rem;
+    text-align: justify; }
+
+/* =============
+    Gallery
+============= */
+#gallery div ul {
   display: grid;
-  grid-template-areas: ". intro .";
-  grid-template-columns: 10px auto 10px;
-  min-height: 100vh;
-  padding: 50px 0; }
-  @media (min-width: 768px) {
-    #intro {
-      grid-template-columns: auto 70% auto; } }
-  @media (min-width: 992px) {
-    #intro {
-      grid-template-columns: auto 50% auto;
-      padding: 75px 0; } }
-  @media (min-width: 1200px) {
-    #intro {
-      grid-template-columns: auto 40% auto;
-      padding: 100px 0; } }
-  #intro > div {
-    grid-area: intro; }
-    #intro > div h1 {
-      margin-bottom: 20px; }
+  grid-template-columns: repeat 1, 1fr;
+  grid-template-areas: "gallery_1" "gallery_2" "gallery_3"; }
+  #gallery div ul li {
+    background-size: cover;
+    height: 300px;
+    margin-bottom: 10px; }
+  #gallery div ul li:nth-child(1) {
+    grid-area: gallery_1;
+    background-image: url(../img/gallery/gallery_1.jpg); }
+  #gallery div ul li:nth-child(2) {
+    grid-area: gallery_2;
+    background-image: url(../img/gallery/gallery_2.jpg); }
+  #gallery div ul li:nth-child(3) {
+    grid-area: gallery_3;
+    background-image: url(../img/gallery/gallery_3.png); }

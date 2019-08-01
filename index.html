@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Font Awesome -->
-    
+    <script src="https://kit.fontawesome.com/3c79b583ac.js"></script>
     <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.css">
     <title>Off Canvas Navigation Template</title>
@@ -17,18 +18,31 @@
 
     <!-- Your options for data-navigation-position is: left | right -->
     <!-- Your options for data-navigation-slide is: over | under | push -->
-    <section id="off-canvas-container" data-navigation-position="right" data-navigation-slide="push">
+    <section id="off-canvas-container" data-navigation-position="left" data-navigation-slide="push">
         <div>
             <button>
                 <i class="far fa-times-circle" id="close-btn"></i>
             </button>
             <div id="nav-container">
                 <nav data-nav="main-navigation">
-
+                    <section>
+                        <div class="search">
+                            <input type="text" class="searchTerm" placeholder="Search">
+                            <button type="submit" class="searchButton">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </section>
                     <ul>
-                        <li><a href="">link 1</a></li>
-                        <li><a href="">link 2</a></li>
-                        <li><a href="">link 2</a></li>
+                        <li><a href="">PRODUCT</a></li>
+                        <li><a href="">PRICING</a></li>
+                        <li><a href="">FEATURES</a></li>
+                        <li><a href="">BLOG</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                     </ul>
                 </nav>
             </div>
@@ -52,6 +66,27 @@
         <!-- overlay for the view when the menu is visible. Please don't move -->
 
         <!-- Your Content -->
+        <section id="hero">
+        </section>
+        <section id="info" class="content-grid">
+            <div>
+                <h1>
+                    Off-Canvas Menu
+                </h1>
+                <p>Off-canvas layouts are common and useful for mobile and desktop layouts. Be a navigation guru with our Foundation online webinar training. You’ll learn techniques for creating responsive navigations that work with any type of site.
+                    In addition to that you can learn tips and tricks and best practices for all of Foundation’s components.
+                </p>
+            </div>
+        </section>
+        <section id="gallery" class="content-grid">
+            <div>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
 
         <!-- End Your Content -->
     </main>

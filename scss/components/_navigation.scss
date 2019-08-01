@@ -4,67 +4,133 @@
 a:hover,
 a:link {
     text-decoration: none;
-    transition: o.25s;
+    transition: 0.25s;
 }
 
-
-#off-canvas-container{
+#off-canvas-container {
     /* -------------
         Here are the properties you can changes for the off-canvas navigation-slide
     ------------- */
-
-    // background-color: $black;
-    // grid-template-columns: 10px auto 10px;
-    // padding-top: 20px;
-
+    background-color: $drk-brwn;
+    grid-template-columns: 10px auto;
+    grid-template-areas: ". off-canvas";
+    padding-top: 10px;
     // width of the off canvas navigation
-    // width: 200px;
-
-
+    width: 250px;
     /* close btn */
-    button {
-        background-color: transparent;
-        border: none;
-        color: $white;
-        cursor: pointer;
-        font-size: rem-calc(25);
-        margin-bottom: 20px;
-        text-align: right;
-        transition: 0.25s;
-        width: 100%;
-    }
+    div {
+        > button {
+            background-color: transparent;
+            border: none;
+            color: $white;
+            cursor: pointer;
+            font-size: rem-calc(25);
+            margin-bottom: 10px;
+            text-align: right;
+            transition: 0.25s;
+            width: 100%;
+        }
+        /* close btn */
+        >button:hover {
+            // color: $red;
+        }
 
-    /* close btn */
-    button:hover {
-        // color: $red;
-    }
+        nav {
+            section {
+                div {
+                    width: 100%;
+                    display: flex;
 
-    ul {
-        li {
-            a:link,
-            a:visited {
-                color: $white;
+                    input {
+                        width: 100%;
+                        height: 50px;
+                        outline: none;
+                        color: $drk-brwn;
+                        background-color: $gold;
+                        border: none;
+                        padding: 0;
+                    }
+
+                    button {
+                        // display: inline-block;
+                        // background-color: $orange;
+                        // height: 50px;
+                        // width: 50px;
+                        width: 40px;
+                        height: 50px;
+                        background: $orange;
+                        text-align: center;
+                        color: #fff;
+                        cursor: pointer;
+                        font-size: 20px;
+
+                        i {}
+                    }
+                }
             }
 
-            a:active,
-            a:hover {
-                color: $black;
+            ul {
+                li {
+                    text-align: right;
+
+                    a:link,
+                    a:visited {
+                        color: $white;
+                        font-weight: bold;
+                        padding: 15px 5% 0 0;
+                        display: inline-block;
+                        width: 95%;
+                        font-size: rem-calc(20);
+                    }
+                }
+            }
+
+            ul:nth-child(2) {
+                li {
+                    a:link,
+                    a:visited {
+                        &::after{
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height:1px;
+                            background: $gold;
+                            margin-top: 15px;
+                        }
+                    }
+                    a:active,
+                    a:hover {
+                        color: $black;
+                        background-color: $orange;
+                    }
+                }
+            }
+
+            ul:nth-child(3) {
+                display: flex;
+                justify-content: space-between;
+                margin-left: 50%;
+                padding-right: 5%;
             }
         }
     }
 }
 
-
 #burger-icon {
-    background-color: $white;
-    border: none;
+    background-color: $drk-brwn;
+    border: 1px solid $orange;
+    border-radius: 100px;
     font-size: rem-calc(18);
     outline: none;
     padding: 8px;
     position: fixed;
-    right: 20px;
+    left: 20px;
     top: 20px;
     z-index: 100;
+
+    i {
+        color: $white;
+    }
 }
 
 #burger-icon:hover {
